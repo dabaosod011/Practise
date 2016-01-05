@@ -1,27 +1,25 @@
 *.class
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-
 *.o
 *.d
 *.ut
-log
-main
-lib*.a
-*_demo
-tmp
-t.*
 *.pid
-node_modules
-*.class
+*.user
+*.sdf
+*.suo
+*.ncb
+*.opensdf
+*.o
+*.d*
+*.filters
+*.DS_Store
+*.log
+*.aps
+*.psess
+*.vsp
+*.pyc
 
+output
+Debug
+Release
+ipch
+log
