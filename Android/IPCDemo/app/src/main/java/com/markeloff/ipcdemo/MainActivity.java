@@ -1,20 +1,27 @@
 package com.markeloff.ipcdemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private final static String LOG_TAG = "MainActivity";
+    private final int REQ_CODE_1 = 1;
+    private final int REQ_CODE_2 = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +47,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        initComponents();
     }
 
     @Override
@@ -82,20 +91,75 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            Toast.makeText(this, "nav_camera", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_gallery) {
-
+            Toast.makeText(this, "nav_gallery", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_slideshow) {
-
+            Toast.makeText(this, "nav_slideshow", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_manage) {
-
+            Toast.makeText(this, "nav_manage", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_share) {
-
+            Toast.makeText(this, "nav_share", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_send) {
-
+            Toast.makeText(this, "nav_send", Toast.LENGTH_SHORT).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    void initComponents() {
+        Button btnStartToAdd = (Button) this.findViewById(R.id.btn_start_activity_to_add);
+        btnStartToAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, AnotherActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("First", 20);
+                bundle.putInt("Second", 30);
+                intent.putExtras(bundle);
+                intent.setAction("Add");
+                startActivityForResult(intent, REQ_CODE_1);
+            }
+        });
+
+        Button btnStartToSub = (Button) this.findViewById(R.id.btn_start_activity_to_sub);
+        btnStartToSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, AnotherActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("First", 20);
+                bundle.putInt("Second", 30);
+                intent.putExtras(bundle);
+                intent.setAction("Sub");
+                startActivityForResult(intent, REQ_CODE_2);
+            }
+        });
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Log.d(LOG_TAG, "requestCode is: " + Integer.toString(requestCode));
+        Log.d(LOG_TAG, "resultCode is: " + Integer.toString(resultCode));
+
+        switch (requestCode) {
+            case REQ_CODE_1:
+                if (RESULT_OK == resultCode) {
+                    Bundle bundle = data.getExtras();
+                    int result = bundle.getInt("Result");
+                    Toast.makeText(this, "onActivityResult: sum = " + result, Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case REQ_CODE_2:
+                if (RESULT_OK == resultCode) {
+                    Bundle bundle = data.getExtras();
+                    int result = bundle.getInt("Result");
+                    Toast.makeText(this, "onActivityResult: sub = " + result, Toast.LENGTH_SHORT).show();
+                }
+                break;
+        }
     }
 }
