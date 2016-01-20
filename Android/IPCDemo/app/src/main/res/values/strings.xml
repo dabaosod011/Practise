@@ -10,4 +10,10 @@
     <string name="start_activity_to_add">Start to add</string>
     <string name="close">Close</string>
     <string name="start_activity_to_sub">Start to sub</string>
+    <string name="title_activity_serializable_demo">Serializable Demo</string>
+    <string name="title_activity_parcelable_demo">Parcelable Demo</string>
+    <string name="parcel_demo_text">Book Info</string>
+    <string name="serial_demo_text">Person Info</string>
+    <string name="serializable_demo">Serializable Demo</string>
+    <string name="parcelable_demo">Parcelable Demo</string>
 </resources>

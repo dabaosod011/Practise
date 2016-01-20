@@ -1,4 +1,4 @@
-package com.markeloff.ipcdemo;
+package com.markeloff.ipcdemo.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +16,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.markeloff.ipcdemo.R;
+import com.markeloff.ipcdemo.data.Book;
+import com.markeloff.ipcdemo.data.Person;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -115,7 +119,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, AnotherActivity.class);
+                intent.setClass(MainActivity.this, StartForResultActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putInt("First", 20);
                 bundle.putInt("Second", 30);
@@ -130,13 +134,48 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, AnotherActivity.class);
+                intent.setClass(MainActivity.this, StartForResultActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putInt("First", 20);
                 bundle.putInt("Second", 30);
                 intent.putExtras(bundle);
                 intent.setAction("Sub");
                 startActivityForResult(intent, REQ_CODE_2);
+            }
+        });
+
+        Button btnSerialDemo = (Button) this.findViewById(R.id.btn_serial_demo);
+        btnSerialDemo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Person mPerson = new Person();
+                mPerson.setName("Markeloff");
+                mPerson.setAge(30);
+
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, SerializableDemoActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("Person", mPerson);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
+        Button btnParcelDemo = (Button) this.findViewById(R.id.btn_parcel_demo);
+        btnParcelDemo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Book mBook = new Book();
+                mBook.setBookName("C++ Primer");
+                mBook.setAuthor("Stanley B. Lippman");
+                mBook.setPrice(83.2);
+
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, ParcelableDemoActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("Book", mBook);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
     }

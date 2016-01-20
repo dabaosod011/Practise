@@ -9,14 +9,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.markeloff.ipcdemo.AnotherActivity"
-    tools:showIn="@layout/activity_another">
+    tools:context=".ui.SerializableDemoActivity"
+    tools:showIn="@layout/activity_serializable_demo">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/close"
-        android:id="@+id/btn_close"
+        android:text="@string/serial_demo_text"
+        android:id="@+id/id_text_person"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
