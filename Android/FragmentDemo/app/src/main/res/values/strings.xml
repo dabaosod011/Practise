@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FragmentDemo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sound">Sound</string>
+    <string name="display">Display</string>
+    <string name="sound_view">This is sound view</string>
+    <string name="display_view">This is display view</string>
+</resources>

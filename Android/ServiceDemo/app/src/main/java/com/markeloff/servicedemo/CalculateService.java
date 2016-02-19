@@ -33,7 +33,18 @@ public class CalculateService extends Service {
                 .build();
         startForeground(1, notification);
 
+        /*
+        *   should not do complex job in service;
+        *   user separate thread to do complex jobs
+        */
+        /* try {
+            Thread.sleep(60000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+
         super.onCreate();
+        Log.d(TAG, "onCreate out.");
     }
 
     @Override
@@ -49,7 +60,7 @@ public class CalculateService extends Service {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                Log.d(TAG,"Doing something in background in separate thread.");
+                Log.d(TAG, "Doing something in background in separate thread.");
             }
         }).start();
 
@@ -85,7 +96,7 @@ public class CalculateService extends Service {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    Log.d(TAG,"Doing calculate in background in separate thread.");
+                    Log.d(TAG, "Doing calculate in background in separate thread.");
                 }
             }).start();
         }
