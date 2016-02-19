@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
         RxDemo mDemo = new RxDemo();
         mDemo.rxDemoForFun1();
         mDemo.rxDemoForFun2();
+        mDemo.rxDemoForFun3();
     }
-
-
 }
