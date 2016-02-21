@@ -1,5 +1,6 @@
 package com.markeloff.demo.java8lambdas.data;
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 public class Album {
 	public String name = "";
@@ -11,4 +12,10 @@ public class Album {
 		this.tracks = tracks;
 		this.musicians = musicians;
 	}
+	
+	public Stream<Artist> getMusicians(){
+		return musicians.stream();
+	}
 }
+
+
