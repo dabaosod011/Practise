@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">PractiseDemo</string>
+    <string name="main_greeting">Hello, this is practise demo app by markeloff.</string>
+
+    <string name="storage_greeting">This is the storage demo.</string>
+    <string name="storage_demo">Storage Demo</string>
+    <string name="fragment_demo">Fragment Demo</string>
+
+    <string name="hello_blank_fragment">This is fragment demo.</string>
+    <string name="sound">Sound</string>
+    <string name="display">Display</string>
+    <string name="sound_view">This is sound view</string>
+    <string name="display_view">This is display view</string>
+
+    <string name="ipc_demo">IPC Demo</string>
+    <string name="title_activity_another">AnotherActivity</string>
+    <string name="ipc_greetings">This is IPC demo.</string>
+    <string name="start_activity_to_add">Start to add</string>
+    <string name="close">Close</string>
+    <string name="start_activity_to_sub">Start to sub</string>
+    <string name="title_activity_serializable_demo">Serializable Demo</string>
+    <string name="title_activity_parcelable_demo">Parcelable Demo</string>
+    <string name="parcel_demo_text">Book Info</string>
+    <string name="serial_demo_text">Person Info</string>
+    <string name="serializable_demo">Serializable Demo</string>
+    <string name="parcelable_demo">Parcelable Demo</string>
+
+    <string name="start_service">Start Service</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="bind_service">Bind Service</string>
+    <string name="unbind_service">UnBind Service</string>
+    <string name="service_demo">Service Demo</string>
+
+    <string name="rx_demo">Rx Demo</string>
+    <string name="rx_headline">This is Rx Demo</string>
+    <string name="retrofit_headline">This is Retrofix Demo</string>
+    <string name="retrofit_demo">Retrofix Demo</string>
+
+</resources>
