@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.markeloff.practise.ActionBarShare.SendTextActivity;
 import com.markeloff.practise.Retrofit.RetrofitDemoActivity;
 import com.markeloff.practise.fragment.FragmentDemoActivity;
 import com.markeloff.practise.ipc.IpcDemoActivity;
@@ -66,6 +67,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startNewActivity(MainActivity.this, RetrofitDemoActivity.class);
+            }
+        });
+
+        ((Button) findViewById(R.id.btn_send_text)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startNewActivity(MainActivity.this, SendTextActivity.class);
             }
         });
     }

@@ -71,4 +71,14 @@
         android:layout_alignStart="@+id/btn_service"
         android:layout_alignTop="@+id/btn_rx"
         android:text="@string/retrofit_demo" />
+
+    <Button
+        android:id="@+id/btn_send_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/btn_rx"
+        android:layout_marginTop="20dp"
+        android:text="@string/actionbar_share_demo" />
 </RelativeLayout>

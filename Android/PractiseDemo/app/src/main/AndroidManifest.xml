@@ -30,7 +30,8 @@
 
         <service android:name=".service.DemoService" />
 
-        <activity android:name=".Retrofit.RetrofitDemoActivity"></activity>
+        <activity android:name=".Retrofit.RetrofitDemoActivity" />
+        <activity android:name=".ActionBarShare.SendTextActivity"></activity>
     </application>
 
 </manifest>

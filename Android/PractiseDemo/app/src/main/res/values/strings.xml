@@ -36,4 +36,10 @@
     <string name="retrofit_headline">This is Retrofix Demo</string>
     <string name="retrofit_demo">Retrofix Demo</string>
 
+    <string name="actionbar_share_demo">ActionBar Share Demo</string>
+    <string name="share">Share</string>
+    <string name="search">Search</string>
+    <string name="settings">Setting</string>
+    <string name="send_text">Send Text</string>
+
 </resources>
