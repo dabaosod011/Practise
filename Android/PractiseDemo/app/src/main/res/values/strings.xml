@@ -42,4 +42,6 @@
     <string name="settings">Setting</string>
     <string name="send_text">Send Text</string>
 
+    <string name="bluetooth_classic_demo">Bluetooth Classic Demo</string>
+
 </resources>

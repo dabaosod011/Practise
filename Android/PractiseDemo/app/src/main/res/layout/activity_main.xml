@@ -81,4 +81,14 @@
         android:layout_below="@id/btn_rx"
         android:layout_marginTop="20dp"
         android:text="@string/actionbar_share_demo" />
+
+    <Button
+        android:id="@+id/btn_bluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/btn_send_text"
+        android:layout_marginTop="20dp"
+        android:text="@string/bluetooth_classic_demo" />
 </RelativeLayout>

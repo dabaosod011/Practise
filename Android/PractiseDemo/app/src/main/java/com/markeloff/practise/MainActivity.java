@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import com.markeloff.practise.ActionBarShare.SendTextActivity;
 import com.markeloff.practise.Retrofit.RetrofitDemoActivity;
+import com.markeloff.practise.bluetooth.classic.BlueToothClassicActivity;
 import com.markeloff.practise.fragment.FragmentDemoActivity;
 import com.markeloff.practise.ipc.IpcDemoActivity;
 import com.markeloff.practise.rx.RxDemoActivity;
@@ -74,6 +75,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startNewActivity(MainActivity.this, SendTextActivity.class);
+            }
+        });
+
+        ((Button) findViewById(R.id.btn_bluetooth)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startNewActivity(MainActivity.this, BlueToothClassicActivity.class);
             }
         });
     }
