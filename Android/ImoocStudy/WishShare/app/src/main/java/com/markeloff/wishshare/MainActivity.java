@@ -30,7 +30,6 @@ public class MainActivity extends Activity {
     private ImageView mPhoto;
     private EditText mWord;
     private Button mShare;
-    private IWXAPI iwxapi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

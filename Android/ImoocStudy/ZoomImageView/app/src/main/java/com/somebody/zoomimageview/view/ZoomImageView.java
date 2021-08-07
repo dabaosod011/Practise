@@ -13,7 +13,6 @@ import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewTreeObserver;
-import android.widget.ImageView;
 
 /**
  * Copyright (c) 2016 Wen-xintech Inc. All rights reserved.
@@ -22,7 +21,7 @@ import android.widget.ImageView;
  * hai.xiao@wen-xintech.com
  */
 
-public class ZoomImageView extends ImageView
+public class ZoomImageView extends android.support.v7.widget.AppCompatImageView
         implements ViewTreeObserver.OnGlobalLayoutListener, ScaleGestureDetector.OnScaleGestureListener, View.OnTouchListener {
     private static final String TAG = "ZoomImageView";
 
